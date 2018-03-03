@@ -79,7 +79,7 @@
                 },
                 insertSample: function () {
                     var vm = this;
-                    axios.get('/sample.md')
+                    axios.get('./sample.md')
                         .then(function (response) {
                             vm.text = response.data
                         })
