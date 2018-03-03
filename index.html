@@ -89,10 +89,10 @@
                         })
                 },
                 zoomIn: function () {
-                    this.zoom += 0.1
+                    this.zoom = (this.zoom += 0.1) > 2 ? 3 : this.zoom;
                 },
                 zoomOut: function () {
-                    this.zoom -= 0.1
+                    this.zoom = (this.zoom -= 0.1) < 0.1 ? 0.1 : this.zoom;
                 }
             },
             computed: {
